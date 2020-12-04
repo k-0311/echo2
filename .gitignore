@@ -1,0 +1,13 @@
+.DS_Store
+.cache-loader
+.history
+node_modules/
+package-lock.json
+# Editor directories and files
+.prettierrc
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
