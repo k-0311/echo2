@@ -55,6 +55,14 @@ module.exports = {
         ]
       },
       {
+        title: 'algorithms',
+        collapsable: true,
+        children: [
+          ['/algorithms/link', '链表'],
+          ['/algorithms/array', '数组']
+        ]
+      },
+      {
         title: 'Rust',
         collapsable: true,
         children: ['/rust/first']
