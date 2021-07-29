@@ -2,7 +2,6 @@
 .cache-loader
 .history
 node_modules/
-package-lock.json
 docs/.vuepress/dist
 # Editor directories and files
 .prettierrc
