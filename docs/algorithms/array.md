@@ -1,4 +1,4 @@
-### [leetcode1：两数之和 (简单)](https://leetcode-cn.com/problems/two-sum/)
+### [1.两数之和 ](https://leetcode-cn.com/problems/two-sum/)
 
 ```javascript
 const twoNumSum = (nums, targe) => {
@@ -14,7 +14,7 @@ const twoNumSum = (nums, targe) => {
 }
 ```
 
-### [leetcode15：三数之和(中等)](https://leetcode-cn.com/problems/3sum/)
+### [15.三数之和](https://leetcode-cn.com/problems/3sum/)
 
 ```javascript
 const threeNumSum = nums => {
@@ -50,7 +50,7 @@ const threeNumSum = nums => {
 }
 ```
 
-### [leetcode88：[合并两个有序数组(简单)](https://leetcode-cn.com/problems/merge-sorted-array/)
+### [88.合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
 
 ```javascript
 const twoNumConcat = (nums1, m, nums2, n) => {
@@ -69,7 +69,7 @@ const twoNumConcat = (nums1, m, nums2, n) => {
 }
 ```
 
-### [leetcode146：LRU 缓存机制(中等)](https://leetcode-cn.com/problems/lru-cache/)
+### [146.LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/)
 
 ```javascript
 class LRU {
@@ -95,7 +95,7 @@ class LRU {
 }
 ```
 
-### [leetcode349：两个数组的交集(简单)](https://leetcode-cn.com/problems/intersection-of-two-arrays/)
+### [349.两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/)
 
 ```javascript
 const intersection = (nums1, nums2) => {
@@ -110,7 +110,7 @@ const intersection = (nums1, nums2) => {
 }
 ```
 
-### [leetcode611：有效三角形的个数(中等)](https://leetcode-cn.com/problems/valid-triangle-number/)
+### [611.有效三角形的个数](https://leetcode-cn.com/problems/valid-triangle-number/)
 
 ```javascript
 const triangleNumber = nums => {

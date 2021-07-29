@@ -33,3 +33,7 @@ let plugin = new Plugin()
 App.use(plugin, 1, 5, 4, 94, 974, 94, 9)
 new App({ name: 'seeker', outfit: 'ubi' })
 ```
+
+# 参考资料
+
+- [前端中的 IoC 理念](https://zhuanlan.zhihu.com/p/53832991)
