@@ -66,6 +66,13 @@ module.exports = {
         title: 'Rust',
         collapsable: true,
         children: ['/rust/first']
+      },
+      {
+        title: 'Other',
+        collapsable: true,
+        children: [
+          ['/other/git ssh','git ssh']
+        ]
       }
     ]
   }
