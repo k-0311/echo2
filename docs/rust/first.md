@@ -11,7 +11,7 @@
 安装完成后可以通过以下命令测试
 
 ```shell
-rust -V  # 注意大写的V
+rustc -V  # 注意大写的V
 cargo -V
 ```
 
