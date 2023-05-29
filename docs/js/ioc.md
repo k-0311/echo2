@@ -1,22 +1,35 @@
 ```javascript
+const isFunction = fn => fn && typeof fn === 'function'
+
 class App {
   constructor(options) {
-    this.options = options
+    this.formatOptions(options)
+    this.init()
   }
   static use(plugin) {
-    const _modules = this._modules || (this._modules = [])
-    if (_modules.indexOf(plugin) > -1) {
-      return this
-    }
-    const args = [...arguments]
-    args.splice(0, 1, this)
-    if (typeof plugin.install === 'function') {
-      plugin.install.apply(plugin, args)
-    } else if (typeof plugin === 'function') {
-      plugin.apply(null, args)
-    }
-    _modules.push(plugin)
+    // if (this.$modules.indexOf(plugin) > -1) {
+    //   return this
+    // }
+    const $modules = this.$modules || (this.$modules = [])
+    $modules.push([plugin, [...arguments].slice(1)])
     return this
+  }
+  formatOptions({ onReady, ...options }) {
+    this.options = options
+    isFunction(onReady) && onReady(this)
+  }
+  init() {
+    this.initModules()
+  }
+  initModules() {
+    App.$modules?.map(([plugin, args]) => {
+      const _args = [this, ...args]
+      if (isFunction(plugin.install)) {
+        plugin.install.apply(plugin, _args)
+      } else if (isFunction(plugin)) {
+        plugin.apply(null, _args)
+      }
+    })
   }
 }
 
@@ -31,7 +44,13 @@ class Plugin {
 let plugin = new Plugin()
 
 App.use(plugin, 1, 5, 4, 94, 974, 94, 9)
-new App({ name: 'seeker', outfit: 'ubi' })
+new App({
+  name: 'seeker',
+  outfit: 'ubi',
+  onReady(app) {
+    // do something...
+  }
+})
 ```
 
 # 参考资料
